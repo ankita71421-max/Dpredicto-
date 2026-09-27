@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Disease Prediction Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="Dpredicto Logo">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#how">How It Works</a></li>
+                <li><a href="#assessment">Assessment</a></li>
+                <li><a href="#prediction">Prediction</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- ================= HOME ================= -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-text">
+
+                <h1>Disease Prediction Assistant</h1>
+
+                <p>
+                    Describe your symptoms and receive a machine-learning-based
+                    disease prediction along with useful health information.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#assessment" class="btn">
+                        Start Health Assessment
+                    </a>
+
+                    <a href="#how" class="btn secondary">
+                        How It Works
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img src="images/hero.png"
+                     alt="Disease Prediction Illustration">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section id="how" class="how">
+
+            <h2>How It Works</h2>
+
+            <div class="how-container">
+
+                <div class="how-image">
+
+                    <img src="images/howitworks.png"
+                         alt="How Disease Prediction Works">
+
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="row">
+
+                        <div class="step">
+
+                            <h3>01 Basic Information</h3>
+
+                            <p>
+                                Enter your age and sex before starting
+                                the assessment.
+                            </p>
+
+                        </div>
+
+
+                        <div class="step">
+
+                            <h3>02 Describe Symptoms</h3>
+
+                            <p>
+                                Describe the symptoms you are experiencing
+                                in your own words.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="step">
+
+                            <h3>03 Machine Learning</h3>
+
+                            <p>
+                                The entered symptoms are analyzed using
+                                a trained machine learning model.
+                            </p>
+
+                        </div>
+
+
+                        <div class="step">
+
+                            <h3>04 Prediction & Information</h3>
+
+                            <p>
+                                Receive a predicted condition along with
+                                educational disease information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ASSESSMENT ================= -->
+
+        <section id="assessment" class="assessment">
+
+            <div class="assessment-container">
+
+                <div class="assessment-heading">
+
+                    <span class="sub-tag">
+                        — HEALTH ASSESSMENT
+                    </span>
+
+                    <h2>
+                        Tell Us About Your Symptoms
+                    </h2>
+
+                    <p>
+                        Enter the following information to get
+                        a machine-learning-based prediction.
+                    </p>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <form id="assessment-form" class="assessment-form">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-question">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- AGE -->
+
+                    <div class="form-question">
+
+                        <label for="age">
+                            Age
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            min="1"
+                            max="120"
+                            placeholder="Enter your age"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- SEX -->
+
+                    <div class="form-question">
+
+                        <label for="sex">
+                            Sex
+                        </label>
+
+                        <select
+                            id="sex"
+                            name="sex"
+                            required
+                        >
+
+                            <option value="" disabled selected>
+                                Select your sex
+                            </option>
+
+                            <option value="male">
+                                Male
+                            </option>
+
+                            <option value="female">
+                                Female
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- SYMPTOMS -->
+
+                    <div class="form-question">
+
+                        <label for="symptoms">
+                            Describe Your Symptoms
+                        </label>
+
+                        <p class="question-help">
+                            Describe how you are feeling in your own words.
+                        </p>
+
+                        <textarea
+                            id="symptoms"
+                            name="symptoms"
+                            rows="6"
+                            placeholder="For example: I have fever, headache and body pain for the last three days..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- DURATION -->
+
+                    <div class="form-question">
+
+                        <label for="duration">
+                            How Long Have You Had These Symptoms?
+                        </label>
+
+                        <input
+                            type="text"
+                            id="duration"
+                            name="duration"
+                            placeholder="For example: 3 days"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="submit-assessment-btn"
+                    >
+                        Submit Assessment
+                    </button>
+
+
+                    <p class="assessment-note">
+                        This assessment is for educational purposes only
+                        and does not replace professional medical advice.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PREDICTION ================= -->
+
+        <section id="prediction"
+                 class="prediction-section">
+
+            <div class="prediction-container">
+
+
+                <div class="prediction-heading">
+
+                    <span class="sub-tag">
+                        — PREDICTION RESULT
+                    </span>
+
+                    <h2>
+                        Your Prediction
+                    </h2>
+
+                </div>
+
+
+                <!-- Prediction Card -->
+
+                <div class="prediction-card">
+
+
+                    <span class="pred-label">
+                        PREDICTED CONDITION
+                    </span>
+
+
+                    <h1
+                        id="disease-name"
+                        class="disease-title"
+                    >
+                        Prediction will appear here
+                    </h1>
+
+
+
+                    <!-- ML MODEL -->
+
+                    <div class="info-pill ml-pill">
+
+                        <span class="pill-icon">
+                            ⚙️
+                        </span>
+
+                        <span>
+                            ML Model Used:
+                            <strong id="ml-model-name">
+                                Logistic Regression + Random Forest
+                            </strong>
+                        </span>
+
+                    </div>
+
+                    <!-- DISCLAIMER -->
+
+                    <div class="info-pill disclaimer-pill">
+
+                        <span class="pill-icon">
+                            ℹ️
+                        </span>
+
+                        <span>
+                            This prediction is for educational purposes
+                            only and is not a medical diagnosis.
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- DISEASE INFORMATION -->
+
+                    <div
+                        id="disease-details"
+                        class="disease-details-container"
+                    >
+
+
+                        <!-- OVERVIEW -->
+
+                        <div class="detail-block">
+
+                            <h3>
+                                Disease Overview
+                            </h3>
+
+                            <p id="disease-overview">
+                                Disease information will appear here
+                                after the prediction.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- DIAGNOSIS -->
+
+                        <div class="detail-block">
+
+                            <h3>
+                                Diagnosis & Tests
+                            </h3>
+
+                            <p id="disease-diagnosis">
+                                Information about commonly used
+                                diagnostic procedures will appear here.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- TREATMENT -->
+
+                        <div class="detail-block">
+
+                            <h3>
+                                Treatment Options
+                            </h3>
+
+                            <p id="disease-treatment">
+                                General educational information about
+                                treatment will appear here.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- WARNING -->
+
+                        <div class="detail-block warning-block">
+
+                            <h3>
+                                When to Seek Medical Attention
+                            </h3>
+
+                            <p id="disease-warning">
+                                Important warning signs and situations
+                                requiring medical attention will appear here.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- SOURCES -->
+
+                        <div class="detail-block sources-block">
+
+                            <h3>
+                                Medical Sources
+                            </h3>
+
+                            <p id="disease-sources">
+                                References and medical sources will
+                                appear here.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <h3 class="footer-logo">
+                    DPredicto
+                </h3>
+
+                <p class="footer-tagline">
+                    ML-Based Disease Prediction & Health Insights
+                </p>
+
+            </div>
+
+
+
+            <!-- Navigation -->
+
+            <div class="footer-nav">
+
+                <h4>
+                    EXPLORE
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#how">
+                            How It Works
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#assessment">
+                            Assessment
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#prediction">
+                            Prediction
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 DPredicto. All rights reserved.
+            </p>
+
+            <p>
+                Understanding symptoms. Exploring possibilities.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
